@@ -1,5 +1,7 @@
 package pl.shonsu.sort;
 
+import pl.shonsu.search.BinarySearch;
+
 public class InsertSort {
 
     public static void sort(int[] tab, SortDirection sortDirection) {
@@ -16,6 +18,23 @@ public class InsertSort {
             tab[i + 1] = key;
         }
     }
+
+    public static void sortWithBinary(int[] tab) {
+        int key;
+        for (int j = 1; j < tab.length; j++) {
+            key = tab[j];
+
+            int result = BinarySearch.binarySearch(tab, key, 0, j - 1);
+            int ins = Math.abs(result + 1);
+
+            for (int i = j - 1; i >= ins; i--) {
+                tab[i + 1] = tab[i];
+            }
+            tab[ins] = key;
+
+        }
+    }
+
     public static void insertionSortRecursive(int[] arr, int n) {
         if (n <= 1)
             return;
@@ -31,6 +50,7 @@ public class InsertSort {
         }
         arr[j + 1] = last;
     }
+
 
     enum SortDirection {
         ASC, DESC

@@ -1,4 +1,4 @@
-package pl.shonsu.sort;
+package pl.shonsu.search;
 
 public class BinarySearch {
     public static int binarySearch(int[] tab, int search) {
@@ -18,7 +18,24 @@ public class BinarySearch {
 
             }
         }
-        return -1;
+        return -(startIdx) - 1;
+    }
+
+    public static int binarySearch(int[] tab, int search, int startIdx, int endIdx) {
+        int mid;
+        while (startIdx <= endIdx) {
+            mid = (startIdx + endIdx) / 2;
+
+            if (search == tab[mid]) {
+                return mid;
+            } else if (search < tab[mid]) {
+                endIdx = mid - 1;
+            } else {
+                startIdx = mid + 1;
+
+            }
+        }
+        return -(startIdx) - 1;
     }
 
     public static int binarySearchRecursive(int[] tab, int search, int startIdx, int endIdx) {
@@ -32,7 +49,7 @@ public class BinarySearch {
                 return binarySearchRecursive(tab, search, mid + 1, endIdx);
             }
         }
-        return -1;
+        return -(startIdx) - 1;
     }
 
 }
