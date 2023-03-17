@@ -19,16 +19,16 @@ public class Main {
 
         Instant start = Instant.now();
         //MergeSort.sort(tab, 0, tab.length - 1);
-        InsertSort.sortWithBinary(tab);
+        BubbleSort.sort(tab);
         Instant stop = Instant.now();
         Duration timeElapsed = Duration.between(start, stop);
         System.out.println("Time taken: " + timeElapsed.toMillis() + " milliseconds");
-
-        System.out.println(Arrays.toString(tab));
-        int result = binarySearch(tab, 1, 0, tab.length - 1);
-        int result2 = Arrays.binarySearch(tab, 1);
-        System.out.println("Result: " + result);
-        System.out.println("Result: " + result2);
+        System.out.println(Arrays.toString(tab) + "\n");
+//        System.out.println(Arrays.toString(tab));
+//        int result = binarySearch(tab, 1, 0, tab.length - 1);
+//        int result2 = Arrays.binarySearch(tab, 1);
+//        System.out.println("Result: " + result);
+//        System.out.println("Result: " + result2);
 
     }
 
