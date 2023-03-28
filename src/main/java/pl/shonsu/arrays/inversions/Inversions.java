@@ -1,4 +1,4 @@
-package pl.shonsu.arrays;
+package pl.shonsu.arrays.inversions;
 
 import java.util.ArrayList;
 import java.util.List;
