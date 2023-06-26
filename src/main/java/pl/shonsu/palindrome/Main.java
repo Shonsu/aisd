@@ -1,25 +1,21 @@
 package pl.shonsu.palindrome;
 
-import java.util.Arrays;
-
-import static pl.shonsu.palindrome.Palindrome.checkIfPalindrome;
-import static pl.shonsu.palindrome.Palindrome.reversePalindrome;
+import static pl.shonsu.palindrome.Palindrome.longestPalindrome;
 
 public class Main {
     public static void main(String[] args) {
 
-        String str = "";
-        char[] arr = str.toCharArray();
+        String str = "aba1234321abcdefg";
 
-        System.out.println("Palindrome:\t" + Arrays.toString(arr));
+//        System.out.println("Palindrome:\t" + Arrays.toString(arr));
+//
+//        boolean test = checkIfPalindrome(arr);
+//
+//        System.out.println("Is palindrome: " + test);
+//
+//        System.out.println(checkIfPalindrome2(String.valueOf(arr)));
 
-        boolean test = checkIfPalindrome(arr);
-
-        System.out.println("Is palindrome: " + test);
-
-        reversePalindrome(arr, 0);
-
-        System.out.println("Reverse:\t" + Arrays.toString(arr));
+        System.out.println(longestPalindrome(str));
     }
 
 
